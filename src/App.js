@@ -1,6 +1,8 @@
 import './App.css';
 import React, {useState} from 'react'
 import Header from './components/Header'
+import Alpha from './components/Alpha'
+import Bravo from './components/Bravo';
 
 function App() {
   const [productName, setProductName] = useState("Cup and String")
@@ -17,9 +19,12 @@ function App() {
     <div className="App">
       <Header />
      <h1>Hello World</h1>
-     <h2>My Product is: {productName}</h2>
+     {/* <h2>My Product is: {productName}</h2>
      <input  placeholder='Product Name' onChange=
-     {handleChange}/>
+     {handleChange}/> */}
+      <Alpha setProductName={setProductName}/>
+      <Bravo name={productName} />
+
     </div>
   );
 }
